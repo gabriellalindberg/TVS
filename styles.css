@@ -198,4 +198,77 @@ footer {
     padding: 20px 40px; /* lägger till utrymme för pilarna */
 }
 
+.timeline {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 40px 0;
+    white-space: nowrap;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #007BFF;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-content {
+    position: relative;
+    width: 150px;
+    padding: 10px;
+    background-color: #FF69B4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content.top {
+    margin-bottom: 60px; /* Boxes above the line */
+}
+
+.timeline-content.bottom {
+    margin-top: 60px; /* Boxes below the line */
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background-color: #007BFF;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-content.top::before {
+    bottom: -60px; /* Line from the box above the main timeline */
+}
+
+.timeline-content.bottom::before {
+    top: -60px; /* Line from the box below the main timeline */
+}
+
+.timeline-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
 
