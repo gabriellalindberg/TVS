@@ -86,7 +86,7 @@ footer {
   .block img {
     width: 200px;
     height: auto;
-    border-radius: 4px;
+    border: 5px solid #FF69B4
   }
   
   .block .text {
@@ -98,3 +98,9 @@ footer {
   .block.right {
     flex-direction: row-reverse;
   }
+
+  .block img,
+.text {
+  flex: 1; /* Dela lika utrymme */
+  max-width: 50%; /* Valfritt: för att förhindra att nån blir för bred */
+}
