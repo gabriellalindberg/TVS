@@ -204,55 +204,64 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
-  }
-  
-  .timeline::before {
+    height: 185px; /* Ge timeline en höjd */
+}
+
+.timeline::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 0;
     width: 100%;
     height: 4px;
     background: #0af;
-    transform: translateY(-50%);
     z-index: 0;
-  }
-  
-  .event-container {
+}
+
+.event-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .dot {
+}
+
+.dot {
     width: 20px;
     height: 20px;
     background: #0af;
     border-radius: 50%;
-    margin-bottom: 20px; /* Avstånd mellan dot och box */
     z-index: 2;
-  }
-  
-  .event {
+    position: relative;
+}
+
+/* Lägg till en linje mellan punkten och boxen */
+.event-container::after {
+    content: "";
+    position: absolute;
+    top: 20px; /* Starta från botten av punkten */
+    width: 2px;
+    height: 70px; /* Längden från dot till event */
+    background: #0af;
+}
+
+.event {
     position: relative;
     background: #f55cb0;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 200px;
+    margin-top: 70px; /* Låt boxen vara längre ner från punkten */
     z-index: 1;
-  }
-  
-  .event h3 {
+}
+
+.event h3 {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  .event p {
+}
+
+.event p {
     margin: 10px 0 0;
     font-size: 16px;
-  }
-  
-
+}
