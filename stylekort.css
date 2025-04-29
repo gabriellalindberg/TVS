@@ -84,12 +84,24 @@ footer {
   }
   
   .block img {
-    width: 200px;
+    width: 50%;
     height: auto;
-    border: 5px solid #FF69B4
+    border: 5px solid #FF69B4;
+    flex: 0 0 auto; /* Bilden håller sin storlek */
   }
   
-  .block .text {
+  .textblock {
+    display: flex;
+    flex-direction: column; /* Gör så att rubrik och text ligger under varandra */
+    flex: 1; /* Tar upp resterande utrymme */
+  }
+  
+  .textblock .rubrik {
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .textblock .text {
     font-size: 18px;
     color: #333;
   }
@@ -98,9 +110,4 @@ footer {
   .block.right {
     flex-direction: row-reverse;
   }
-
-  .block img,
-.text {
-  flex: 1; /* Dela lika utrymme */
-  max-width: 50%; /* Valfritt: för att förhindra att nån blir för bred */
-}
+  
