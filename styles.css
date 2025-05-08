@@ -224,6 +224,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
   }
   
   .punkter span {
@@ -274,3 +275,70 @@ footer {
   
   
   
+=======
+    align-items: flex-start;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    height: 160px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 20px; /* linjen ligger mitt i bollen */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #0af;
+    z-index: 0;
+}
+
+.event-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: #0af;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px; /* så bollen centreras på linjen (20px linjehöjd - 10px) */
+    z-index: 2;
+}
+
+.event-container::after {
+    content: "";
+    position: absolute;
+    top: 30px; /* startar direkt under bollen (10px + bollens 20px) */
+    width: 2px;
+    height: 40px; /* linjen ner till boxen */
+    background: #0af;
+    z-index: 1;
+}
+
+.event {
+    position: relative;
+    background: #f55cb0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    margin-top: 70px; /* avstånd från toppen (så det hamnar nära linjen) */
+    z-index: 1;
+}
+
+.event h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+>>>>>>> 5f3018254c9a102b7d12c5540a7f01f426747e55
