@@ -224,7 +224,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
   }
   
   .punkter span {
@@ -273,14 +272,7 @@ footer {
     height: 50px;
   }
   
-  
-  
-=======
-    align-items: flex-start;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    height: 160px;
-}
+
 
 .timeline::before {
     content: "";
@@ -341,4 +333,3 @@ footer {
     margin: 10px 0 0;
     font-size: 16px;
 }
->>>>>>> 5f3018254c9a102b7d12c5540a7f01f426747e55
