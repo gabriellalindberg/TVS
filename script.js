@@ -19,3 +19,22 @@ scrollRightBtn.addEventListener('click', () => {
         behavior: 'smooth'  // Mjuk scroll
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".punkter");
+  
+    const riktningar = [
+      'upp', 'ner', 'ner', 'upp', 'upp',
+      'ner', 'upp', 'ner', 'upp', 'upp',
+      'ner', 'upp', 'upp', 'upp', 'ner',
+      'upp', 'ner', 'ner', 'ner', 'upp'
+    ];
+  
+    for (let i = 0; i < 22; i++) {
+      const punkt = document.createElement("span");
+      punkt.classList.add(riktningar[i]); // lägg till klassen 'upp' eller 'ner'
+      container.appendChild(punkt);
+    }
+  });
+
+  

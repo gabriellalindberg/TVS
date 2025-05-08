@@ -197,71 +197,80 @@ footer {
 .scroll-container .program-grid {
     padding: 20px 40px; /* lägger till utrymme för pilarna */
 }
-  
-.timeline {
+
+
+.linje-container {
     position: relative;
+    width: 100%;
+    margin: 100px auto;
+    height: 10px;
+  }
+  
+  .linje {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #FF69B4;
+  }
+  
+  .punkter {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 100px 0;
-    height: 185px; /* Ge timeline en höjd */
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #0af;
-    z-index: 0;
-}
-
-.event-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dot {
-    width: 20px;
-    height: 20px;
-    background: #0af;
+  }
+  
+  .punkter span {
+    width: 10px;
+    height: 10px;
+    background-color:#FF69b6;
     border-radius: 50%;
-    z-index: 2;
+  }
+  
+  .punkter span {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
     position: relative;
-}
-
-/* Lägg till en linje mellan punkten och boxen */
-.event-container::after {
+  }
+  
+  /* Vertikal linje från punktens mitt och 50px ner */
+  .punkter span::after {
     content: "";
     position: absolute;
-    top: 20px; /* Starta från botten av punkten */
+    top: 50%;                /* mitt på punkten vertikalt */
+    left: 50%;
+    transform: translateX(-50%);
     width: 2px;
-    height: 70px; /* Längden från dot till event */
-    background: #0af;
-}
+    height: 50px;
+    background-color: orange;
+  }
 
-.event {
-    position: relative;
-    background: #f55cb0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    margin-top: 70px; /* Låt boxen vara längre ner från punkten */
-    z-index: 1;
-}
-
-.event h3 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.event p {
-    margin: 10px 0 0;
-    font-size: 16px;
-}
+  .punkter span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: green;
+  }
+  
+  .punkter span.upp::after {
+    bottom: 50%;
+    height: 50px;
+  }
+  
+  .punkter span.ner::after {
+    top: 50%;
+    height: 50px;
+  }
+  
+  
+  
