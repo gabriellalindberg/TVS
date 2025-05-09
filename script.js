@@ -20,21 +20,20 @@ scrollRightBtn.addEventListener('click', () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".punkter");
-  
-    const riktningar = [
-      'upp', 'ner', 'ner', 'upp', 'upp',
-      'ner', 'upp', 'ner', 'upp', 'upp',
-      'ner', 'upp', 'upp', 'upp', 'ner',
-      'upp', 'ner', 'ner', 'ner', 'upp'
-    ];
-  
-    for (let i = 0; i < 22; i++) {
-      const punkt = document.createElement("span");
-      punkt.classList.add(riktningar[i]); // lägg till klassen 'upp' eller 'ner'
-      container.appendChild(punkt);
-    }
-  });
+
+// Mönstret: true = upp, false = ner
+const riktningar = [
+  true, false, false, true, true, false, true, false, true, true,
+  false, true, true, true, false, true, false, false, false, true,
+  true, true
+];
+
+const punkterContainer = document.querySelector('.punkter');
+
+riktningar.forEach(isUp => {
+  const punkt = document.createElement('span');
+  punkt.classList.add(isUp ? 'upp' : 'ner');
+  punkterContainer.appendChild(punkt);
+});
 
   
