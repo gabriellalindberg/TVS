@@ -23,13 +23,19 @@ scrollRightBtn.addEventListener('click', () => {
 
 
 const mönster = [
-  "upp", "ner", "ner", "upp", "upp", "ner", "upp", "ner", "upp", "upp",
-  "ner", "upp", "upp", "upp", "ner", "upp", "ner", "ner", "ner", "upp", "upp", "upp"
+  "upp", "ner", "ner", "upp", "upp", "ner", "upp", "upp", "ner", "upp", "upp",
+  "ner", "upp", "upp", "upp", "upp", "ner", "upp", "upp", "ner", "ner", "ner", "ner", "upp", "upp", "upp",
 ];
 
-const långaIndex = [2, 4, 9, 12, 17, 20]; // OBS: index börjar på 0 (3:e pinne = index 2)
+const långaIndex = [2, 4, 7, 9, 12, 14, 17, 20, 22, 24];
 
 const container = document.querySelector(".punkter");
+
+// Array med texter för varje box
+const texter = [
+  "Första dagen", "Quickshot", "NASA", "Rundtur", "Melodifestivalen", "DUO", "Klara Gymnasium", "Intro till SVTi","BarnPlay", "Statister", "Meteorologerna",
+  "LIVE", "OS uppgift", "Morgonstudion", "Magasin 4", "Svenska Nyheter", "PET", "Tekniksprångets instagram", "Malvina", "CD", "Corda", "Team", "Videocore", "Lilla Aktuellt", "Studiebesök", "Sista dagen"
+];
 
 mönster.forEach((riktning, index) => {
   const punkt = document.createElement("span");
@@ -37,8 +43,8 @@ mönster.forEach((riktning, index) => {
   if (långaIndex.includes(index)) {
     punkt.classList.add("lång");
   }
-  punkt.setAttribute("data-label", `Box ${index + 1}`);
+  // Använd text från texter-arrayen
+  punkt.setAttribute("data-label", texter[index]);
   container.appendChild(punkt);
 });
-
   

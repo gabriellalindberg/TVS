@@ -274,6 +274,7 @@ footer {
   }
   .punkter span.ner::before {
     top: calc(100% + 50px);
+    background-color: green; /* Blå färg */
   }
 
   /* Längre pinne */
