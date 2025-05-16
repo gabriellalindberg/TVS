@@ -186,16 +186,16 @@ footer {
 }
 
 .scroll-btn.left {
-    left: 0;
+    left: -40px;
 }
 
 .scroll-btn.right {
-    right: 0;
+    right: -40px;
 }
 
 /* Program-grid måste få plats under knapparna */
 .scroll-container .program-grid {
-    padding: 20px 40px; /* lägger till utrymme för pilarna */
+    padding: 20px 0px; /* lägger till utrymme för pilarna */
 }
 
 
