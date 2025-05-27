@@ -34,7 +34,7 @@ const container = document.querySelector(".punkter");
 // Array med texter för varje box
 const texter = [
   "Första dagen", "Quickshot", "NASA", "Rundtur", "Melodifestivalen", "DUO", "Klara Gymnasium", "Intro till SVTi","BarnPlay", "Statister", "Meteorologerna",
-  "LIVE", "OS uppgift", "Morgonstudion", "Magasin 4", "Svenska Nyheter", "PET", "Tekniksprångets instagram", "Malvina", "CD", "Corda", "Team", "Videocore", "Lilla Aktuellt", "Studiebesök", "Sista dagen"
+  "LIVE", "OS uppgift", "Morgonstudion", "Magasin 4", "Svenska Nyheter", "PET", "Tekniksprångets instagram", "Malvina", "CD", "Corda", "CS", "Videocore", "Lilla Aktuellt", "Studiebesök", "Sista dagen"
 ];
 
 mönster.forEach((riktning, index) => {
