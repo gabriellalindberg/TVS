@@ -148,7 +148,8 @@ footer {
   
   .program-card img {
     width: 100%;
-    height: auto;
+     height: 170px; /* Eller vilken höjd du tycker passar bäst */
+     object-fit: cover; /* Beskär bilden snyggt så den fyller kortet */
     display: block;
   }
   
