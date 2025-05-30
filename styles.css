@@ -290,3 +290,23 @@ footer {
   .punkter span.ner.lång::before {
     top: calc(100% + 120px);
   }
+
+.punkter span.stor::before {
+  width: 90px;
+  padding: 6px;
+  font-size: 12px;
+  white-space: normal;  /* gör att texten får radbrytas */
+  line-height: 1.2;
+  text-align: center;
+}
+
+.punkter span.mellan::before {
+  width: 80px;              /* Fast bredd */
+  padding: 6px;
+  font-size: 12px;
+  white-space: normal;       /* Tillåt radbrytning */
+  line-height: 1.2;
+  text-align: center;
+}
+
+

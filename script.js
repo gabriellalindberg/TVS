@@ -46,5 +46,18 @@ mönster.forEach((riktning, index) => {
   // Använd text från texter-arrayen
   punkt.setAttribute("data-label", texter[index]);
   container.appendChild(punkt);
+
+  const storaIndex = [4, 10, 17];
+if (storaIndex.includes(index)) {
+  punkt.classList.add("stor");
+}
+
+const mellanIndex = [13, 24];
+if (mellanIndex.includes(index)) {
+  punkt.classList.add("mellan");
+}
+
+
 });
-  
+
+
