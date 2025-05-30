@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 1.6;
+    background-color: #0b0c0c;
+}
+
+header {
+    background-color: #0b0c0c;
+    color: white;
+    padding: 20px 0;
+}
+
+
+/* Flexcontainer för headern, justera logotyp och meny */
+.header-content {
+    display: flex;
+    align-items: center; /* Vertikal centrering */
+    justify-content: flex-start; /* Gör så att logotypen är till vänster och menyn till höger */
+width: 100%;
+}
+
+/* Logotypen */
+.header-image img {
+    width: 70px; /* Justera logotypens bredd efter behov */
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Menyn (kategorilistan) */
+.category-list {
+    display: flex; /* Gör så att menyn är horisontell */
+    list-style-type: none;
+    margin: 0; /* Ta bort default margin */
+    padding: 0; /* Ta bort padding */
+}
+
+/* Enskilda listobjekt */
+.category-list li {
+    margin: 0 15px; /* Ta bort default margin */
+}
+
+/* Länkar */
+.category-list a {
+    text-decoration: none; /* Tar bort understrykningen från länkarna */
+    color: #f5f5f5; /* Länkens textfärg */
+    font-weight: bold; /* Fetstil för länkar */
+    font-size: 20px; /* Justera storlek på texten */
+    transition: color 0.3s ease; /* Smidig övergång när färgen ändras vid hover */
+}
+
+/* Hover-effekt för länkar */
+.category-list a:hover {
+    color: #FF69B4; /* Färgändring vid hover (kan justeras till önskad färg) */
+}
+
+
+main {
+    padding: 20px;
+    background-color: #0b0c0c;
+    color: white;
+}
+
+
+footer {
+    background-color: #0b0c0c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
